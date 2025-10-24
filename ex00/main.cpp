@@ -3,10 +3,11 @@
 
 int main()
 {
-    Zombie x;
-    x.randomChump("temporZombie");
+    std::string n1 = "random_Zombie";
+    randomChump(n1);
 
-    Zombie y;
-    y.newZombie("permaZombie");
-    delete &y;
+    //std::string n2 = "new_Zombie";
+    Zombie* y = newZombie("new_Zombie");
+    y->announce();
+    delete (y);
 }
